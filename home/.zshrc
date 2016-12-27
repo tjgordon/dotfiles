@@ -46,6 +46,8 @@ eval `dircolors ~/.dircolors`
 # Aliases
 alias ls='ls --color'
 
-# Dotfile manager
+#Dotfile manager
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
+# Check for updates
+homeshick --quiet refresh
