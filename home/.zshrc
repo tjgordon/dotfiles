@@ -50,4 +50,4 @@ alias ls='ls --color'
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
 # Check for updates
-homeshick --quiet refresh
+# homeshick --quiet refresh
