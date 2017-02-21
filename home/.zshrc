@@ -30,6 +30,9 @@ bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 bindkey '^[[1;5C' forward-word  # [Ctrl-RightArrow] - move forward one word
 bindkey '^[[1;5D' backward-word # [Ctrl-LeftArrow] - move backward one word
+bindkey "^j" backward-word
+bindkey "^k" forward-word
+
 
 #~ if [[ "${terminfo[kcbt]}" != "" ]]; then
   #~ bindkey "${terminfo[kcbt]}" reverse-menu-complete   # [Shift-Tab] - move through the completion menu backwards
@@ -40,8 +43,10 @@ bindkey    "^[[3~"          delete-char
 bindkey    "^[3;5~"         delete-char
 
 # ls colors
-zstyle ':completion:*' list-colors 'di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-eval `dircolors ~/.dircolors`
+# zstyle ':completion:*' list-colors 'di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+#eval `dircolors ~/.dircolors`
+#eval `dircolors -b /etc/DIR_COLORS`  
+eval `dircolors -b ~/dircolors-solarized/dircolors.ansi-universal` 
 
 # Aliases
 alias ls='ls --color'
